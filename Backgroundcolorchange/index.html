@@ -4,10 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Color Change</title>
+    <title>Random Quation project</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #container{
+            margin: auto;
+            border: 1px solid red;
+            width: 75%;
+            height: 250px;
+            background-color: aquamarine;
+        }
+        #color-name{
+            text-align: center;
+            height: auto;
+            margin-top: 100px;
+            color: white;
+            font-size: 30px;
+        }
+        .button-area{
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+        #button{
+            width: 150px;
+            height: 40px;
+            background-color: orangered;
+            color: #fff;
+            border: none;
+            font-size: 17px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.5s;
+            
+        }
+        #button:hover{
+            letter-spacing: 3px;
+            transition: 0.5s;
+    
+        }
+
+    </style>
 </head>
 <body>
-    <h1>How To Change Background Color use javasecript </h1>
-    
+    <h1>How to Change Random Quation Project</h1>
+    <div id="container">
+        <h3 id="color-name"></h3>
+    </div>
+    <div class="button-area">
+        <button id="button">Click Me</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
