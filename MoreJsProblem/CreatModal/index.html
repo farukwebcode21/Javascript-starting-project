@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat Modal</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #edeef6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        button{
+            background-color: #47a386;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-size: 14px;
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+        .modal-container{
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+        .modal-container.show{
+            pointer-events: auto;
+            opacity: 1;
+        }
+        .modal{
+            background-color: #fff;
+            padding: 30px 50px;
+            width: 600px;
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow:0 2px 4px rgba(0, 0, 0, 0.2);
+
+        }
+        .modal h1{
+            margin: 0;
+            text-align: center;
+
+        }
+        .modal p{
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <button id="open">Click me Please</button>
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <h1>Modal </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quia labore maiores quos maxime. Architecto ipsa aliquid rem molestias cumque, sed obcaecati sint voluptate? Tempore voluptatem a quisquam iure eos nihil numquam odio ea. Et quis harum sed? Impedit officia numquam asperiores recusandae enim deserunt similique obcaecati maiores, eligendi odio odit ex necessitatibus veniam corporis deleniti inventore consequatur minus ullam! Aut et possimus quo, distinctio reiciendis nobis accusantium saepe fuga ratione velit dolores cumque non dolore illo eligendi quis ullam quae debitis. Quisquam libero ipsa earum quidem, a iusto dolor cumque rem mollitia sed totam ratione itaque soluta cum alias. Officiis similique quam itaque rem. Vero ad odit sint voluptate voluptatem neque dolorum aperiam eveniet quibusdam, est nihil nemo vel facere tempore dolores, magni sequi doloribus error dolor officia magnam ab, itaque iste? Voluptate laudantium aliquid neque earum ea! Molestiae incidunt blanditiis harum sit vero cumque suscipit quibusdam ex maiores.</p>
+            <button id="close">Close me</button>
+        </div>
+    </div>
+    <script>
+        const open = document.getElementById('open');
+        const modal_container = document.getElementById('modal');
+        const close = document.getElementById('close');
+
+        open.addEventListener('click', () =>{
+            modal_container.classList.add('show');
+        });
+        close.addEventListener('click', () =>{
+            modal_container.classList.remove('show');
+        })
+    </script>
+</body>
+</html>
