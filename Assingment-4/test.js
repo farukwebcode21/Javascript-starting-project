@@ -27,11 +27,32 @@ for(let i =10; i>=6; i--){
 }
 console.log(sum); */
 
-function sum(i){
+/* function sum(i){
     if (i == 1) {
         return 1;
     }
     return i + sum(i-1);
 }
-console.log(sum(6));
+console.log(sum(10)); */
 
+
+/* function sum (n){
+    if (n === 0) {
+        return 0;
+    }else{
+        return sum(n-1) + n;
+    }
+}
+
+console.log(sum(111)); */
+
+
+function countDown(number){
+    console.log(number);
+    const newNumber = number + 1;
+    if (newNumber < 10) {
+        countDown(newNumber);
+       return 0;
+    }
+}
+console.log(countDown(10))

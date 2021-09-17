@@ -16,6 +16,6 @@ function sum(i){
         return 1 ;
     }
     // return sum(i-1) + i
-    return i + sum(i -1);
+    return i * sum(i -1);
 }
 console.log(sum(6));

@@ -30,6 +30,7 @@ function findLongestWord(array) {
     return longestWord;
   }
   
+  
   var word = findLongestWord(["The","quick","brown", "foxxxxx", "jumped", "over", "the", "lazy", "dog"]);
   console.log(word);
 
